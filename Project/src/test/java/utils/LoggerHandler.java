@@ -1,6 +1,5 @@
 package utils;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -19,21 +18,23 @@ public class LoggerHandler {
     }
 
     public static void initLog4j() {
+        // Specify the location of the Log4j configuration file
         System.setProperty("log4j.configurationFile", "src/main/resource/Log4j.properties");
 
-        // Optional: Specify the log file directory
-        String logDirectory = "/logs/"; // Specify your log directory name
-        System.setProperty("logDirectory", logDirectory);
-
-        // Create the log directory if it doesn't exist
-        createLogDirectory(logDirectory);
+     System.out.println("ho123456");
+        createLogDirectory();
     }
 
-    private static void createLogDirectory(String logDirectory) {
+    private static void createLogDirectory() {
+        // Get the log directory path from the Log4j configuration
+        String logDirectory = System.getProperty("log4j.appender.RollingAppender.File");
+        logDirectory = logDirectory.substring(0, logDirectory.lastIndexOf('/'));
+
         Path logPath = Paths.get(logDirectory);
 
         if (Files.notExists(logPath)) {
             try {
+                 System.out.println("Checkin the directory");
                 Files.createDirectories(logPath);
             } catch (IOException e) {
                 logger.error("Failed to create the log directory: " + e.getMessage());
