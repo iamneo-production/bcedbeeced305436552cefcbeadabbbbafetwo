@@ -20,7 +20,7 @@ public class LoggerHandler {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
     String timestamp = sdf.format(new Date());
     System.setProperty("log.timestamp", timestamp);
-
+    
     // Initialize Log4j
     PropertyConfigurator.configure("src/main/resources/log4j.properties");
 }

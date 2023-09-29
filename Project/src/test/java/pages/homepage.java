@@ -97,7 +97,7 @@ public class homepage {
                 logger.fatal("My fatal log");
                 logger.debug("debug message");
                 logger.trace("Trace message");
-               
+                      
                  
                 //All levels of logs start 
 
