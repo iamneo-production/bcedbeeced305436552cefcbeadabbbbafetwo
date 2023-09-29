@@ -19,7 +19,7 @@ public class LoggerHandler {
     }
 
     public static void initLog4j() {
-        System.setProperty("log4j.configurationFile", "src/main/resource/log4j.xml");
+        System.setProperty("log4j.configurationFile", "src/main/resource/Log4j.properties");
 
         // Optional: Specify the log file directory
         String logDirectory = "/logs/"; // Specify your log directory name
