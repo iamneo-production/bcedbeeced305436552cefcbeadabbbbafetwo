@@ -9,10 +9,82 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">13,025</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">3,509</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">runner.Testcase1</td><td><a href="#m0">TC_001</a></td><td rowspan="1">1695738697802</td><td rowspan="1">8153</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">runner.Testcase1</td><td><a href="#m0">beforeMethod</a></td><td rowspan="1">1695978999324</td><td rowspan="1">3466</td></tr><tr><th colspan="4">Surefire test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">runner.Testcase1</td><td><a href="#m1">afterMethod</a></td><td rowspan="1">1695979002799</td><td rowspan="1">0</td></tr><tr><th colspan="4">Surefire test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">runner.Testcase1</td><td><a href="#m2">TC_001</a></td><td rowspan="1">1695979002797</td><td rowspan="1">1</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">runner.Testcase1#TC_001</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Surefire test</h2><h3 id="m0">runner.Testcase1#beforeMethod</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ExceptionInInitializerError
+	at org.apache.log4j.Logger.getLogger(Logger.java:104)
+	at freemarker.log._Log4jLoggerFactory.getLogger(_Log4jLoggerFactory.java:31)
+	at freemarker.log.Logger.getLogger(Logger.java:362)
+	at freemarker.template.Configuration.&lt;clinit&gt;(Configuration.java:151)
+	at com.aventstack.extentreports.reporter.AbstractFileReporter.loadTemplateModel(AbstractFileReporter.java:54)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.start(ExtentSparkReporter.java:136)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.access$000(ExtentSparkReporter.java:27)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter$1.onSubscribe(ExtentSparkReporter.java:116)
+	at io.reactivex.rxjava3.subjects.PublishSubject.subscribeActual(PublishSubject.java:133)
+	at io.reactivex.rxjava3.core.Observable.subscribe(Observable.java:13099)
+	at com.aventstack.extentreports.ReactiveSubject.attachReporter(ReactiveSubject.java:38)
+	at com.aventstack.extentreports.ExtentReports.attachReporter(ExtentReports.java:66)
+	at utils.Reporter.createExtentReport(Reporter.java:72)
+	at utils.Reporter.generateExtentReport(Reporter.java:32)
+	at utils.Reporter.generateExtentReport(Reporter.java:27)
+	at runner.Testcase1.beforeMethod(Testcase1.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: java.lang.IllegalArgumentException: Illegal pattern character &apos;U&apos;
+	at java.base/java.text.SimpleDateFormat.compile(SimpleDateFormat.java:845)
+	at java.base/java.text.SimpleDateFormat.initialize(SimpleDateFormat.java:653)
+	at java.base/java.text.SimpleDateFormat.&lt;init&gt;(SimpleDateFormat.java:624)
+	at java.base/java.text.SimpleDateFormat.&lt;init&gt;(SimpleDateFormat.java:599)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:226)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.configureRootCategory(PropertyConfigurator.java:648)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:514)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.&lt;clinit&gt;(LogManager.java:127)
+	... 53 more
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">runner.Testcase1#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">runner.Testcase1#TC_001</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.ExceptionInInitializerError
+	at org.apache.log4j.Logger.getLogger(Logger.java:104)
+	at freemarker.log._Log4jLoggerFactory.getLogger(_Log4jLoggerFactory.java:31)
+	at freemarker.log.Logger.getLogger(Logger.java:362)
+	at freemarker.template.Configuration.&lt;clinit&gt;(Configuration.java:151)
+	at com.aventstack.extentreports.reporter.AbstractFileReporter.loadTemplateModel(AbstractFileReporter.java:54)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.start(ExtentSparkReporter.java:136)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.access$000(ExtentSparkReporter.java:27)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter$1.onSubscribe(ExtentSparkReporter.java:116)
+	at io.reactivex.rxjava3.subjects.PublishSubject.subscribeActual(PublishSubject.java:133)
+	at io.reactivex.rxjava3.core.Observable.subscribe(Observable.java:13099)
+	at com.aventstack.extentreports.ReactiveSubject.attachReporter(ReactiveSubject.java:38)
+	at com.aventstack.extentreports.ExtentReports.attachReporter(ExtentReports.java:66)
+	at utils.Reporter.createExtentReport(Reporter.java:72)
+	at utils.Reporter.generateExtentReport(Reporter.java:32)
+	at utils.Reporter.generateExtentReport(Reporter.java:27)
+	at runner.Testcase1.beforeMethod(Testcase1.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: java.lang.IllegalArgumentException: Illegal pattern character &apos;U&apos;
+	at java.base/java.text.SimpleDateFormat.compile(SimpleDateFormat.java:845)
+	at java.base/java.text.SimpleDateFormat.initialize(SimpleDateFormat.java:653)
+	at java.base/java.text.SimpleDateFormat.&lt;init&gt;(SimpleDateFormat.java:624)
+	at java.base/java.text.SimpleDateFormat.&lt;init&gt;(SimpleDateFormat.java:599)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:226)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.configureRootCategory(PropertyConfigurator.java:648)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:514)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.&lt;clinit&gt;(LogManager.java:127)
+	... 53 more
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

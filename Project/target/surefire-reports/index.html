@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-skipped">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method,  1 skipped,  </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods passed suite-Surefire_suite"> (hide)</a> <!-- hide-methods passed suite-Surefire_suite -->
-                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods passed suite-Surefire_suite"> (show)</a> <!-- show-methods passed suite-Surefire_suite -->
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods skipped suite-Surefire_suite"> (hide)</a> <!-- hide-methods skipped suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods skipped suite-Surefire_suite"> (show)</a> <!-- show-methods skipped suite-Surefire_suite -->
                     </span>
-                    <div class="method-list-content passed suite-Surefire_suite">
+                    <div class="method-list-content skipped suite-Surefire_suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="runner.Testcase1" class="method navigator-link" hash-for-method="TC_001">TC_001</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-Surefire_suite -->
+                    </div> <!-- method-list-content skipped suite-Surefire_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -118,9 +118,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
-          <div class="suite-Surefire_suite-class-passed">
+          <div class="suite-Surefire_suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="skipped.png"/>
               <span class="class-name">runner.Testcase1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -129,10 +129,47 @@
                   <a name="TC_001">
                   </a> <!-- TC_001 -->
                   <span class="method-name">TC_001</span>
+                  <div class="stack-trace">java.lang.ExceptionInInitializerError
+	at org.apache.log4j.Logger.getLogger(Logger.java:104)
+	at freemarker.log._Log4jLoggerFactory.getLogger(_Log4jLoggerFactory.java:31)
+	at freemarker.log.Logger.getLogger(Logger.java:362)
+	at freemarker.template.Configuration.&lt;clinit&gt;(Configuration.java:151)
+	at com.aventstack.extentreports.reporter.AbstractFileReporter.loadTemplateModel(AbstractFileReporter.java:54)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.start(ExtentSparkReporter.java:136)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter.access$000(ExtentSparkReporter.java:27)
+	at com.aventstack.extentreports.reporter.ExtentSparkReporter$1.onSubscribe(ExtentSparkReporter.java:116)
+	at io.reactivex.rxjava3.subjects.PublishSubject.subscribeActual(PublishSubject.java:133)
+	at io.reactivex.rxjava3.core.Observable.subscribe(Observable.java:13099)
+	at com.aventstack.extentreports.ReactiveSubject.attachReporter(ReactiveSubject.java:38)
+	at com.aventstack.extentreports.ExtentReports.attachReporter(ExtentReports.java:66)
+	at utils.Reporter.createExtentReport(Reporter.java:72)
+	at utils.Reporter.generateExtentReport(Reporter.java:32)
+	at utils.Reporter.generateExtentReport(Reporter.java:27)
+	at runner.Testcase1.beforeMethod(Testcase1.java:38)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: java.lang.IllegalArgumentException: Illegal pattern character &apos;U&apos;
+	at java.base/java.text.SimpleDateFormat.compile(SimpleDateFormat.java:845)
+	at java.base/java.text.SimpleDateFormat.initialize(SimpleDateFormat.java:653)
+	at java.base/java.text.SimpleDateFormat.&lt;init&gt;(SimpleDateFormat.java:624)
+	at java.base/java.text.SimpleDateFormat.&lt;init&gt;(SimpleDateFormat.java:599)
+	at org.apache.log4j.DailyRollingFileAppender.activateOptions(DailyRollingFileAppender.java:226)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.configureRootCategory(PropertyConfigurator.java:648)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:514)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.&lt;clinit&gt;(LogManager.java:127)
+	... 53 more
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Surefire_suite-class-passed -->
+          </div> <!-- suite-Surefire_suite-class-skipped -->
         </div> <!-- panel Surefire_suite -->
         <div panel-name="test-xml-Surefire_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -188,12 +225,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'TC_001')
 data.setCell(0, 2, 'runner.Testcase1')
-data.setCell(0, 3, 8153);
+data.setCell(0, 3, 1);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 1 ms</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -221,17 +258,11 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">runner.Testcase1</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">beforeMethod</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">TC_001</span>
-                <span class="method-start">4210 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">12366 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

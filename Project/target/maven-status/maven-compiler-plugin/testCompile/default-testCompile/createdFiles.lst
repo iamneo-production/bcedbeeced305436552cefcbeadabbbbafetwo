@@ -2,8 +2,8 @@ utils/WebDriverHelper.class
 utils/ReadPropertyFile.class
 runner/Testcase1.class
 pages/Deposit.class
-utils/EventHandler.class
 utils/Base.class
+utils/EventHandler.class
 utils/Screenshot.class
 pages/homepage.class
 utils/LoggerHandler.class
