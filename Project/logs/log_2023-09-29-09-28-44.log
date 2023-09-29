@@ -1,7 +1,0 @@
-[INFO] 2023-09-29 09:28:43,128 pages.homepage <init> - 1234
-[INFO] 2023-09-29 09:28:43,131 pages.homepage Valid_Login_TC - qwert
-[INFO] 2023-09-29 09:28:43,131 pages.homepage Valid_Login_TC - Chrome
-[INFO] 2023-09-29 09:28:44,057 pages.homepage Valid_Login_TC - My Info Log
-[WARN] 2023-09-29 09:28:44,057 pages.homepage Valid_Login_TC - My Warn Log
-[ERROR] 2023-09-29 09:28:44,058 pages.homepage Valid_Login_TC - My error log
-[FATAL] 2023-09-29 09:28:44,058 pages.homepage Valid_Login_TC - My fatal log
