@@ -2,8 +2,8 @@ utils/WebDriverHelper.class
 utils/ReadPropertyFile.class
 runner/Testcase1.class
 pages/Deposit.class
-utils/Base.class
 utils/EventHandler.class
+utils/Base.class
 utils/Screenshot.class
 pages/homepage.class
 utils/LoggerHandler.class
@@ -13,5 +13,3 @@ utils/ExcelReader.class
 uistore/WithdrawUI.class
 uistore/DepositUI.class
 utils/Reporter.class
-runner/Testcase3.class
-runner/Testcase2.class

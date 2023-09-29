@@ -1,49 +1,38 @@
 package utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import org.apache.log4j.DailyRollingFileAppender;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.PropertyConfigurator;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class LoggerHandler {
 
-    private static final Logger logger = LogManager.getLogger(LoggerHandler.class);
+    private static final Logger logger = Logger.getLogger(LoggerHandler.class);
 
     public static void main(String[] args) {
         initLog4j();
-        logMessage("This is a sample log message.");
     }
 
     public static void initLog4j() {
-        // Specify the location of the Log4j configuration file
-        System.setProperty("log4j.configurationFile", "src/main/resource/Log4j.properties");
+        // Set the system property for currentTimestamp
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd_HHmmss");
+        String timestamp = sdf.format(new Date());
+        System.setProperty("log.datePattern", "yyyy-MM-dd-HH-mm-ss");
 
-     System.out.println("ho123456");
-        createLogDirectory();
-    }
+        // Initialize Log4j
+        PropertyConfigurator.configure("src/main/resources/log4j.properties");
 
-    private static void createLogDirectory() {
-        // Get the log directory path from the Log4j configuration
-        String logDirectory = System.getProperty("log4j.appender.RollingAppender.File");
-        logDirectory = logDirectory.substring(0, logDirectory.lastIndexOf('/'));
+        // Obtain the "file" appender and configure it
+        Logger log = Logger.getLogger(LoggerHandler.class);
+        DailyRollingFileAppender appender = (DailyRollingFileAppender) log.getAppender("file");
 
-        Path logPath = Paths.get(logDirectory);
-
-        if (Files.notExists(logPath)) {
-            try {
-                 System.out.println("Checkin the directory");
-                Files.createDirectories(logPath);
-            } catch (IOException e) {
-                logger.error("Failed to create the log directory: " + e.getMessage());
-            }
-        }
-    }
-
-    public static void logMessage(String message) {
-        // Log the message using Log4j
-        logger.info(message);
+        // Configure the appender as needed
+        appender.setFile("logs/main_" + timestamp + ".log");
+        PatternLayout layout = new PatternLayout();
+        layout.setConversionPattern("%d %d{Z} [%t] %-5p (%F:%L) - %m%n");
+        appender.setLayout(layout);
+        appender.activateOptions(); // Activate the new options
     }
 }
