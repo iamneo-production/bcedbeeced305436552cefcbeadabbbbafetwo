@@ -2,18 +2,18 @@
 <testng-results ignored="0" total="3" passed="0" failed="0" skipped="3">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-29T08:46:25 UTC" name="Surefire suite" finished-at="2023-09-29T08:46:28 UTC" duration-ms="3221">
+  <suite started-at="2023-09-29T08:51:19 UTC" name="Surefire suite" finished-at="2023-09-29T08:51:22 UTC" duration-ms="2365">
     <groups>
     </groups>
-    <test started-at="2023-09-29T08:46:25 UTC" name="Surefire test" finished-at="2023-09-29T08:46:28 UTC" duration-ms="3221">
+    <test started-at="2023-09-29T08:51:19 UTC" name="Surefire test" finished-at="2023-09-29T08:51:22 UTC" duration-ms="2365">
       <class name="runner.Testcase1">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:runner.Testcase1@7f132176]" started-at="2023-09-29T08:46:28 UTC" name="beforeMethod" finished-at="2023-09-29T08:46:28 UTC" duration-ms="389" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:runner.Testcase1@7f132176]" started-at="2023-09-29T08:51:21 UTC" name="beforeMethod" finished-at="2023-09-29T08:51:22 UTC" duration-ms="502" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -30,7 +30,7 @@ Capabilities {browserName: chrome}]]>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -96,13 +96,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_001()[pri:1, instance:runner.Testcase1@7f132176]" started-at="2023-09-29T08:46:28 UTC" name="TC_001" finished-at="2023-09-29T08:46:28 UTC" duration-ms="0" status="SKIP">
+        <test-method signature="TC_001()[pri:1, instance:runner.Testcase1@7f132176]" started-at="2023-09-29T08:51:22 UTC" name="TC_001" finished-at="2023-09-29T08:51:22 UTC" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -119,7 +119,7 @@ Capabilities {browserName: chrome}]]>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -185,19 +185,19 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_001 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:runner.Testcase1@7f132176]" started-at="2023-09-29T08:46:28 UTC" name="afterMethod" finished-at="2023-09-29T08:46:28 UTC" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:runner.Testcase1@7f132176]" started-at="2023-09-29T08:51:22 UTC" name="afterMethod" finished-at="2023-09-29T08:51:22 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- runner.Testcase1 -->
       <class name="runner.Testcase2">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:runner.Testcase2@49ff7d8c]" started-at="2023-09-29T08:46:25 UTC" name="beforeMethod" finished-at="2023-09-29T08:46:27 UTC" duration-ms="2321" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:runner.Testcase2@49ff7d8c]" started-at="2023-09-29T08:51:20 UTC" name="beforeMethod" finished-at="2023-09-29T08:51:21 UTC" duration-ms="1303" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -214,7 +214,7 @@ Capabilities {browserName: chrome}]]>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -280,13 +280,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_002()[pri:2, instance:runner.Testcase2@49ff7d8c]" started-at="2023-09-29T08:46:27 UTC" name="TC_002" finished-at="2023-09-29T08:46:27 UTC" duration-ms="0" status="SKIP">
+        <test-method signature="TC_002()[pri:2, instance:runner.Testcase2@49ff7d8c]" started-at="2023-09-29T08:51:21 UTC" name="TC_002" finished-at="2023-09-29T08:51:21 UTC" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -303,7 +303,7 @@ Capabilities {browserName: chrome}]]>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -369,19 +369,19 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_002 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:runner.Testcase2@49ff7d8c]" started-at="2023-09-29T08:46:27 UTC" name="afterMethod" finished-at="2023-09-29T08:46:27 UTC" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:runner.Testcase2@49ff7d8c]" started-at="2023-09-29T08:51:21 UTC" name="afterMethod" finished-at="2023-09-29T08:51:21 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- runner.Testcase2 -->
       <class name="runner.Testcase3">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:runner.Testcase3@177bea38]" started-at="2023-09-29T08:46:27 UTC" name="beforeMethod" finished-at="2023-09-29T08:46:28 UTC" duration-ms="458" status="FAIL">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:runner.Testcase3@177bea38]" started-at="2023-09-29T08:51:21 UTC" name="beforeMethod" finished-at="2023-09-29T08:51:21 UTC" duration-ms="509" status="FAIL">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -398,7 +398,7 @@ Capabilities {browserName: chrome}]]>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -464,13 +464,13 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="TC_003()[pri:3, instance:runner.Testcase3@177bea38]" started-at="2023-09-29T08:46:28 UTC" name="TC_003" finished-at="2023-09-29T08:46:28 UTC" duration-ms="0" status="SKIP">
+        <test-method signature="TC_003()[pri:3, instance:runner.Testcase3@177bea38]" started-at="2023-09-29T08:51:21 UTC" name="TC_003" finished-at="2023-09-29T08:51:21 UTC" duration-ms="0" status="SKIP">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -487,7 +487,7 @@ Capabilities {browserName: chrome}]]>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: Could not start a new session. Error while creating session with the driver service. Stopping driver service: Could not start a new session. Response code 500. Message: unknown error: Chrome failed to start: exited abnormally.
   (unknown error: DevToolsActivePort file doesn't exist)
   (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.) 
-Host info: host: '833182680a66', ip: '172.17.0.8'
+Host info: host: '9b0810c56142', ip: '172.17.0.3'
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.2.0-1014-gcp', java.version: '11.0.18'
 Driver info: driver.version: unknown
@@ -553,7 +553,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_003 -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:runner.Testcase3@177bea38]" started-at="2023-09-29T08:46:28 UTC" name="afterMethod" finished-at="2023-09-29T08:46:28 UTC" duration-ms="0" status="SKIP">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:runner.Testcase3@177bea38]" started-at="2023-09-29T08:51:21 UTC" name="afterMethod" finished-at="2023-09-29T08:51:21 UTC" duration-ms="0" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
