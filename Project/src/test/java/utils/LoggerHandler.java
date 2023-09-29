@@ -12,7 +12,8 @@ public class LoggerHandler {
     private static final Logger logger = Logger.getLogger(LoggerHandler.class);
 
     public static void main(String[] args) {
-        initLog4j();
+        LoggerHandler.initLog4j(); // Initialize Log4j before any logging
+          logger.info("we are in");
     }
 
     public static void initLog4j() {
