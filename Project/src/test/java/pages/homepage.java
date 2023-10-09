@@ -4,15 +4,12 @@ package pages;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.By;
 import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.events.WebDriverListener;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,8 +17,8 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import utils.ReadPropertyFile;
 import utils.ExcelReader;
-import utils.LoggerHandler;
-import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
@@ -39,40 +36,33 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.WebDriver;
 import utils.Screenshot;
 import utils.WebDriverHelper;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import uistore.HomepageUI;
 import utils.ExcelReader;
 import utils.Reporter;
 
 public class homepage {
 
-    private final static Logger logger = Logger.getLogger(homepage.class);
+    private static final Logger log = LogManager.getLogger(homepage.class);
     private ExcelReader excelReader;    
     private WebDriverHelper webDriverHelper;
     ExcelReader file = new ExcelReader();
     Reporter reporter = new Reporter();
     ReadPropertyFile configReader = new ReadPropertyFile();
     String browserName = configReader.getBrowserName(); 
- static{
-        
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss");
-        System.setProperty("current.date.time", dateFormat.format(new Date()));
-    }
 
 
     public homepage(WebDriver driver) {
         webDriverHelper = new WebDriverHelper(driver);
         excelReader = new ExcelReader();
-        logger.info("1234");
+        log.info("1234");
         
 
     }
 
 
     public void Valid_Login_TC(WebDriver driver) throws IOException {
-        logger.info(("qwert"));
-        logger.info(browserName);
+        log.info(("qwert"));
+        log.info(browserName);
        
 
         ExtentTest test = Reporter.generateExtentReport().createTest("Login Test", "Execution for Login Function");
@@ -91,13 +81,12 @@ public class homepage {
                 // All levels of logs start 
                 
                 
-                logger.info("My Info Log");
-                logger.warn("My Warn Log");
-                logger.error("My error log");
-                logger.fatal("My fatal log");
-                logger.debug("debug message");
-                logger.trace("Trace message");
-                      
+                log.trace("Trace Message!");
+                log.debug("Debug Message!");
+                log.info("Info Message!");
+                log.warn("Warn Message!");
+                log.error("Error Message!");
+                log.fatal("Fatal Message!");   
                  
                 //All levels of logs start 
 

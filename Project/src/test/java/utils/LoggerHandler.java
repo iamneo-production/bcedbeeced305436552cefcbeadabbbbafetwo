@@ -1,28 +1,48 @@
 package utils;
 
-import org.apache.log4j.DailyRollingFileAppender;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PatternLayout;
-import org.apache.log4j.PropertyConfigurator;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class LoggerHandler {
 
-    private static final Logger logger = Logger.getLogger(LoggerHandler.class);
+    private static final Logger logger = LogManager.getLogger(LoggerHandler.class);
 
     public static void main(String[] args) {
-        LoggerHandler.initLog4j(); // Initialize Log4j before any logging
-          logger.info("we are in");
+        initLog4j();
+        logMessage("This is a sample log message.");
     }
 
     public static void initLog4j() {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss");
-    String timestamp = sdf.format(new Date());
-    System.setProperty("log.timestamp", timestamp);
-    
-    // Initialize Log4j
-    PropertyConfigurator.configure("src/main/resources/log4j.properties");
-}
+        System.setProperty("log4j.configurationFile", "src/main/resource/log4j.xml");
 
+        // Optional: Specify the log file directory
+        String logDirectory = "/logs/"; // Specify your log directory name
+        System.setProperty("logDirectory", logDirectory);
+
+        // Create the log directory if it doesn't exist
+        createLogDirectory(logDirectory);
+    }
+
+    private static void createLogDirectory(String logDirectory) {
+        Path logPath = Paths.get(logDirectory);
+
+        if (Files.notExists(logPath)) {
+            try {
+                Files.createDirectories(logPath);
+            } catch (IOException e) {
+                logger.error("Failed to create the log directory: " + e.getMessage());
+            }
+        }
+    }
+
+    public static void logMessage(String message) {
+        // Log the message using Log4j
+        logger.info(message);
+    }
 }
